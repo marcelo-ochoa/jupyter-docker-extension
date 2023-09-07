@@ -2,8 +2,8 @@ all: clean extension install
 
 ORG=mochoa
 JUPYTER_IMAGE_NAME=jupyter/scipy-notebook
-VERSION=22
-MINOR=04
+VERSION=22.4
+MINOR=0
 IMAGE_NAME=$(ORG)/jupyter-docker-extension
 TAGGED_IMAGE_NAME=$(IMAGE_NAME):$(VERSION).${MINOR}
 
