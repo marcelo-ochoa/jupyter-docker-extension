@@ -1,0 +1,17 @@
+{
+  "icon": "jupyter.svg",
+  "vm": {
+    "composefile": "docker-compose.yml",
+    "exposes": { "socket": "jupyter-docker-extension.sock" }
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "Jupyter Notebook",
+      "root": "/ui",
+      "src": "index.html",
+      "backend": {
+        "socket": "jupyter-docker-extension.sock"
+      }
+    }
+  }
+}

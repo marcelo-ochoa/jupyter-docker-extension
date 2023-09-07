@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  jupyter-docker-extension:
+    image: ${DESKTOP_PLUGIN_IMAGE}
+  jupyter:
+    image: jupyter/scipy-notebook:ubuntu-22.04
+    command: jupyter lab --NotebookApp.token='' --NotebookApp.open_browser='False' --NotebookApp.disable_check_xsrf='True' 
+    container_name: jupyter_embedded_dd_vm
+    restart: unless-stopped
+    volumes:
+      - jupyter_data:/home/jovyan
+    environment:
+      TZ: America/Argentina/Buenos_Aires
+    ports:
+      - 58888:8888
+volumes:
+  jupyter_data:
