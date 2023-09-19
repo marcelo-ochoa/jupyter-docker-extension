@@ -47,6 +47,15 @@ Note: that if you upgrade Jupyter Notebook Docker Desktop Extension above post i
 
 Any project that you checkout using git command into /home/jovyan/work directory will persistent against Docker Desktop restart also Jupyter Notebook extension upgraded.
 
+### Add IJava Kernel support
+
+The extension is using the official Jupyter Docker Image, an extra step is necessary if you want IJava support.
+Adding this kernel is easy, just right after the extension is installed by excuting in a terminal:
+
+```bash
+docker exec -ti --user root jupyter_embedded_dd_vm /bin/sh -c "curl -s https://raw.githubusercontent.com/marcelo-ochoa/jupyter-docker-extension/main/addJava.sh | bash"
+```
+
 ## Know kveats
 
 If your Docker Desktop is running in Dark Mode, first execution of Jupyter Notebook will start in Light mode, switch to other pane and back again to the extension and it will run in Dark mode. For the next switchs changing Docker Deskop UI colors will change automatically the extension setting.
