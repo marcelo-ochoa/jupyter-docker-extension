@@ -1,6 +1,6 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
-apt update && apt install -y ca-certificates-java openjdk-19-jdk
+apt update && apt install -y openjdk-19-jdk
 cd /tmp
 wget https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
 mkdir ijava && cd ijava
