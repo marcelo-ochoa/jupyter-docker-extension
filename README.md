@@ -11,11 +11,11 @@ Since Docker Desktop [v4.11.0](https://docs.docker.com/desktop/release-notes/#do
 If you are using Docker Desktop [v4.10.1](https://docs.docker.com/desktop/release-notes/#docker-desktop-4101) or less  you can install just by executing:
 
 ```bash
-$ docker extension install mochoa/jupyter-docker-extension:22.4.0
+$ docker extension install mochoa/jupyter-docker-extension:22.4.1
 Extensions can install binaries, invoke commands and access files on your machine.
 Are you sure you want to continue? [y/N] y
-Image not available locally, pulling mochoa/jupyter-docker-extension:22.4.0...
-Installing new extension "mochoa/jupyter-docker-extension:22.4.0"
+Image not available locally, pulling mochoa/jupyter-docker-extension:22.4.1...
+Installing new extension "mochoa/jupyter-docker-extension:22.4.1"
 Installing service in Desktop VM...
 Setting additional compose attributes
 VM service started
@@ -56,6 +56,15 @@ Adding this kernel is easy, just right after the extension is installed by excut
 docker exec -ti --user root jupyter_embedded_dd_vm /bin/sh -c "curl -s https://raw.githubusercontent.com/marcelo-ochoa/jupyter-docker-extension/main/addJava.sh | bash"
 ```
 
+### Add R Kernel support
+
+The extension is using the official Jupyter Docker Image, an extra step is necessary if you want IJava support.
+Adding this kernel is easy, just right after the extension is installed by excuting in a terminal:
+
+```bash
+docker exec -ti --user root jupyter_embedded_dd_vm /bin/sh -c "curl -s https://raw.githubusercontent.com/marcelo-ochoa/jupyter-docker-extension/main/addR.sh | bash"
+```
+
 ## Know kveats
 
 If your Docker Desktop is running in Dark Mode, first execution of Jupyter Notebook will start in Light mode, switch to other pane and back again to the extension and it will run in Dark mode. For the next switchs changing Docker Deskop UI colors will change automatically the extension setting.
@@ -65,7 +74,7 @@ If your Docker Desktop is running in Dark Mode, first execution of Jupyter Noteb
 To uninstall the extension just execute:
 
 ```bash
-$ docker extension uninstall mochoa/jupyter-docker-extension:22.4.0
+$ docker extension uninstall mochoa/jupyter-docker-extension:22.4.1
 Extension "Jupyter Notebook" uninstalled successfully
 ```
 
