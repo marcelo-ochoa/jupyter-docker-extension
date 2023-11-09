@@ -3,11 +3,10 @@ export DEBIAN_FRONTEND=noninteractive
 export NVARCH=$(arch)
 
 export NVIDIA_REQUIRE_CUDA="cuda>=11.4 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=450,driver<451"
-export NV_CUDA_CUDART_VERSION=11.4.108-1
-export NV_CUDA_COMPAT_PACKAGE=cuda-compat-11-4
+export NV_CUDA_CUDART_VERSION=12-2
+export NV_CUDA_COMPAT_PACKAGE=cuda-compat-12-2
 
 export NVIDIA_REQUIRE_CUDA="cuda>=11.4"
-export NV_CUDA_CUDART_VERSION=11.4.108-1
 
 apt-get update && apt-get install -y --no-install-recommends \
     gnupg2 curl ca-certificates && \
@@ -16,7 +15,7 @@ apt-get update && apt-get install -y --no-install-recommends \
     apt-get purge --autoremove -y curl \
     && rm -rf /var/lib/apt/lists/*
 
-export CUDA_VERSION=11.4.2
+export CUDA_VERSION=12.2
 
 # For libraries in the cuda-compat-* package: https://docs.nvidia.com/cuda/eula/index.html#attachment-a
 apt-get update && apt-get install -y --no-install-recommends \
