@@ -4,7 +4,7 @@ services:
   jupyter-docker-extension:
     image: ${DESKTOP_PLUGIN_IMAGE}
   jupyter:
-    image: jupyter/scipy-notebook:lab-4.0.6
+    image: jupyter/scipy-notebook:lab-4.0.7
     command: jupyter lab --NotebookApp.token='' --NotebookApp.open_browser='False' --NotebookApp.disable_check_xsrf='True' 
     container_name: jupyter_embedded_dd_vm
     restart: unless-stopped

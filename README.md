@@ -11,11 +11,11 @@ Since Docker Desktop [v4.11.0](https://docs.docker.com/desktop/release-notes/#do
 If you are using Docker Desktop [v4.10.1](https://docs.docker.com/desktop/release-notes/#docker-desktop-4101) or less  you can install just by executing:
 
 ```bash
-$ docker extension install mochoa/jupyter-docker-extension:22.4.1
+$ docker extension install mochoa/jupyter-docker-extension:22.4.2
 Extensions can install binaries, invoke commands and access files on your machine.
 Are you sure you want to continue? [y/N] y
-Image not available locally, pulling mochoa/jupyter-docker-extension:22.4.1...
-Installing new extension "mochoa/jupyter-docker-extension:22.4.1"
+Image not available locally, pulling mochoa/jupyter-docker-extension:22.4.2...
+Installing new extension "mochoa/jupyter-docker-extension:22.4.2"
 Installing service in Desktop VM...
 Setting additional compose attributes
 VM service started
@@ -74,7 +74,7 @@ If your Docker Desktop is running in Dark Mode, first execution of Jupyter Noteb
 To uninstall the extension just execute:
 
 ```bash
-$ docker extension uninstall mochoa/jupyter-docker-extension:22.4.1
+$ docker extension uninstall mochoa/jupyter-docker-extension:22.4.2
 Extension "Jupyter Notebook" uninstalled successfully
 ```
 
