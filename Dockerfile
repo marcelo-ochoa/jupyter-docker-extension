@@ -41,7 +41,7 @@ LABEL com.docker.extension.detailed-description="Docker Extension for using Jupy
 LABEL com.docker.extension.changelog="See full <a href=\"https://github.com/marcelo-ochoa/jupyter-docker-extension/blob/main/CHANGELOG.md\">change log</a>"
 LABEL com.docker.desktop.extension.icon="https://raw.githubusercontent.com/marcelo-ochoa/jupyter-docker-extension/main/client/public/favicon.ico"
 LABEL com.docker.extension.detailed-description="Jupyter Docker Stacks are a set of ready-to-run Docker extension containing Jupyter applications and interactive \
-    computing tools usng a personal Jupyter Server with the JupyterLab frontend."
+    computing tools using a personal Jupyter Server with the JupyterLab frontend."
 COPY jupyter.svg metadata.json docker-compose.yml ./
 
 COPY --from=client-builder /app/client/dist ui
